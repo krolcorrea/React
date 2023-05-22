@@ -1,0 +1,22 @@
+.boxRedes {
+    background-color: #3F51B5;
+    height: 120px;
+}
+
+.fundo {
+    background-color: #303F9F !important;
+}
+
+.redesSociais {
+    font-size: 60px !important;
+    color: black !important
+}
+
+.boxAutoral {
+    background-color: #303F9F ;
+    height: 60px;
+}
+
+.textoAutoral{
+    color:black;
+}

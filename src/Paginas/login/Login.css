@@ -1,0 +1,18 @@
+.text-decorator-none {
+    text-decoration: double !important;
+}
+
+.textoCadastro {
+    font-weight: bold !important;
+}
+
+.imgLogin {
+
+    background-image: url("../../assets/img/gatoecachorro.png") ;
+    background-repeat: no-repeat;
+    width: 100vh;
+    min-height: 100vh ;
+    background-size: cover;
+    background-position: center;
+
+    }

@@ -4,7 +4,7 @@ import './CadastroPostagem.css';
 import {useNavigate, useParams } from 'react-router-dom'
 import Tema from '../../../models/Temas';
 import useLocalStorage from 'react-use-localstorage';
-import Postagem from '../../../models/Postagens';
+import Postagem from '../../../models/Postagem';
 import { busca, buscaId, post, put } from '../../../services/Service';
 
 function CadastroPostagem() {

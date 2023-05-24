@@ -16,3 +16,7 @@
 .postagens{
     background-color: whitesmoke;
 }
+
+.text-decorator-none{
+    text-decoration: none;
+}

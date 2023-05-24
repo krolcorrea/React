@@ -6,10 +6,10 @@ import Home from './Paginas/home/Home'
 import Login from './Paginas/login/Login';
 import CadastroUsuario from './Paginas/cadastrousuario/CadastroUsuario';
 import './componentes/temas/listatemas/ListaTemas'
-import './componentes/postagens/listapostagens/ListaPostagens'
+import './componentes/postagens/listapostagens/ListaPostagem'
 import './App.css';
 import ListaTemas from './componentes/temas/listatemas/ListaTemas';
-import ListaPostagens from './componentes/postagens/listapostagens/ListaPostagens';
+import ListaPostagens from './componentes/postagens/listapostagens/ListaPostagem';
 import CadastroTema from './componentes/temas/cadastroTema/CadastroTema';
 import DeletarTema from './componentes/temas/deletarTema/DeletarTema';
 import DeletarPostagem from './componentes/postagens/deletarpost/DeletarPostagem';

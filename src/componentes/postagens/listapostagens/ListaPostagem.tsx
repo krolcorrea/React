@@ -4,11 +4,11 @@ import Postagem from '../../../models/Postagens';
 import { busca } from '../../../services/Service'
 import {Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import {Box} from '@mui/material';
-import './ListaPostagens.css';
+import './ListaPostagem.css';
 import useLocalStorage from 'react-use-localstorage';
 import {useNavigate, useParams } from 'react-router-dom'
 
-function ListaPostagens() {
+function ListaPostagem() {
   const [posts, setPosts] = useState<Postagem[]>([])
   const [token, setToken] = useLocalStorage('token');
   let navigate = useNavigate();
@@ -82,4 +82,4 @@ function ListaPostagens() {
   )
 }
 
-export default ListaPostagens;
+export default ListaPostagem;

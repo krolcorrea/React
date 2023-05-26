@@ -1,14 +1,36 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Typography, Grid, Button } from '@material-ui/core';
 import fotoHome from '../../assets/img/nobanco.jpg';
 import { Box } from '@mui/material';
 import './Home.css';
 import TabPostagens from '../../componentes/postagens/tabpostagens/TabPostagens';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import ModalPostagem from '../../componentes/postagens/modalpostagem/ModalPostagem';
+import useLocalStorage from 'react-use-localstorage';
+import { useSelector } from 'react-redux';
+import { UserState } from '../../store/token/Reducer';
+import Navbar from '../../componentes/estaticos/navbar/Navbar';
+import Footer from '../../componentes/estaticos/footer/Footer';
 
 function Home() {
+
+    let navigate= useNavigate();
+   // const [ token, setToken] = useLocalStorage('token');
+   const token = useSelector<UserState, UserState["tokens"]>(
+    (state) => state.tokens
+  )
+
+    useEffect(() => {
+        if (token == "") {
+          alert("Você precisa estar logado")
+          navigate("/login")
+    
+        }
+      }, [token])
+
     return (
         <>
+        <Navbar/>
             <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
                 <Grid item xs={6}>
                     <Box paddingX={20} >
@@ -18,6 +40,7 @@ function Home() {
                     <Link to='/postagens' className='text-decorator-none'>
                     <Box display="flex" justifyContent="center">
                         <Box marginRight={1}>
+                            <ModalPostagem/>
                         </Box>
                         
                         <Button variant="outlined" className='botao'>Ver Postagens</Button>
@@ -31,6 +54,7 @@ function Home() {
                     <TabPostagens/>
                 </Grid>
             </Grid>
+            <Footer/>
         </>
     );
 }

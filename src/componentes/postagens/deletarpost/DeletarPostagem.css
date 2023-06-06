@@ -1,0 +1,13 @@
+.btnNao {
+    color: #ffffff !important; 
+    background-color: #481b0f !important;
+    border-color: #ff5722 !important;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .btnSim {
+    color: #ffffff !important; 
+    background-color: #ff5722 !important;
+    border-color: #481b0f !important;
+    transition: background-color 0.3s, color 0.3s;
+  }

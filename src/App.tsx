@@ -15,38 +15,51 @@ import DeletarTema from './componentes/temas/deletarTema/DeletarTema';
 import DeletarPostagem from './componentes/postagens/deletarpost/DeletarPostagem';
 import CadastroPostagem from './componentes/postagens/cadastropost/CadastroPostagem';
 import { Provider } from 'react-redux';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 import store from './store/Store';
+import Perfil from './componentes/Perfil/Perfil';
+
 
 
 
 function App() {
+   
   return (
-    <Provider store={store}>    
-    <Router>
-      
-      <div style={{ minHeight: '100vh' }}>
-        <Routes>
-          <Route path='/' element={<Login />} />
-          <Route path='/home' element={<Home />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/cadastrar' element={<CadastroUsuario />} />
-          <Route path='/temas' element={<ListaTemas />} />
-          <Route path="/postagens" element={<ListaPostagens />} />
-          <Route path="/formularioPostagem" element={<CadastroPostagem />} />
-          <Route path="/formularioPostagem/:id" element={<CadastroPostagem />} />
-          <Route path="/formularioTema" element={<CadastroTema />} />
-          <Route path="/formularioTema/:id" element={<CadastroTema />} />
-          <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
-          <Route path="/deletarTema/:id" element={<DeletarTema />} />
+    <>
+    
+    <Provider store={store}>
+    <ToastContainer/>
+      <Router>
+      <Navbar/>
+        <div style={{ minHeight: '100vh' }}>
+                  <Routes>
+            <Route path='/' element={<Login />} />
+            <Route path='/home' element={<Home />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/cadastrar' element={<CadastroUsuario />} />
+            <Route path='/temas' element={<ListaTemas />} />
+            <Route path='/perfil' element={<Perfil/>} />
+            <Route path="/postagens" element={<ListaPostagens />} />
+            <Route path="/formularioPostagem" element={<CadastroPostagem />} />
+            <Route path="/formularioPostagem/:id" element={<CadastroPostagem />} />
+            <Route path="/formularioTema" element={<CadastroTema />} />
+            <Route path="/formularioTema/:id" element={<CadastroTema />} />
+            <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
+            <Route path="/deletarTema/:id" element={<DeletarTema />} />
 
 
-        </Routes>
-      </div>
+          </Routes>
+        </div>
 
+        <Footer />
 
-      
-    </Router >
+      </Router >
+     
     </Provider>
+    
+    </>
   );
+  
 }
 export default App

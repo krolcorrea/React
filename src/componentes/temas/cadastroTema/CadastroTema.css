@@ -1,3 +1,10 @@
 .topo{
     margin-top: 20px;
 }
+
+.btnFinalizar {
+    color: #ffffff !important; 
+    background-color: #ff5722 !important;
+    border-color: #481b0f !important;
+    transition: background-color 0.3s, color 0.3s;
+  }

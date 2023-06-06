@@ -3,11 +3,11 @@ import { Card, CardActions, CardContent, Button, Typography} from '@material-ui/
 import {Box} from '@mui/material';
 import './DeletarTema.css';
 import {useNavigate, useParams } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
 import { buscaId, deleteId } from '../../../services/Service';
 import Tema from '../../../models/Temas';
 import { useSelector } from 'react-redux';
 import { UserState } from '../../../store/token/Reducer';
+import { toast } from 'react-toastify';
 
 
 function DeletarTema() {
@@ -21,7 +21,16 @@ function DeletarTema() {
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado")
+          toast.error('Você precisa estar logado',{
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme:"colored",
+            progress: undefined,
+        } );
             navigate("/login")
     
         }
@@ -43,12 +52,21 @@ function DeletarTema() {
 
         function sim() {
           navigate('/temas')
-            deleteId(`/tema/${id}`, {
+            deleteId(`/temas/${id}`, {
               headers: {
                 'Authorization': token
               }
             });
-            alert('Tema deletado com sucesso');
+            toast.success('Tema deletado com sucesso',{
+              position: "top-right",
+              autoClose: 2000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: false,
+              theme:"colored",
+              progress: undefined,
+          } );
           }
         
           function nao() {
@@ -72,12 +90,12 @@ function DeletarTema() {
           <CardActions>
             <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
               <Box mx={2}>
-                <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
+                <Button onClick={sim} variant="contained" className="btnSim" size='large' color="primary">
                   Sim
                 </Button>
               </Box>
               <Box mx={2}>
-                <Button  onClick={nao} variant="contained" size='large' color="secondary">
+                <Button  onClick={nao} variant="contained" className='btnNao' size='large' color="secondary">
                   Não
                 </Button>
               </Box>

@@ -2,7 +2,12 @@
     cursor: pointer;
 }
 
-.btnModal{
-    border-color: white !important;
-    background-color: white !important
+.btnModal:hover{
+    border-color:#dc3915 !important;
+    background-color:#481b0f  !important
+}
+btnModal:focus{
+    background-color:#dc3915 !important;
+    color: #dc3915 ;
+    outline: none;
 }

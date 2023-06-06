@@ -1,22 +1,24 @@
 .boxRedes {
-    background-color: #3F51B5;
+    background-color: #dc3915;
     height: 120px;
+    
 }
 
 .fundo {
-    background-color: #303F9F !important;
+    background-color: #dc3915 !important;
 }
 
 .redesSociais {
     font-size: 60px !important;
-    color: black !important
+    color: #481b0f !important;
+    font-weight: bold !important
 }
 
 .boxAutoral {
-    background-color: #303F9F ;
+    background-color: #dc3915 ;
     height: 60px;
 }
 
 .textoAutoral{
-    color:black;
+    color:#481b0f;
 }

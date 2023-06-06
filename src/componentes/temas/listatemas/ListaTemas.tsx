@@ -4,11 +4,11 @@ import {Card, CardActions, CardContent, Button, Typography } from '@material-ui/
 import {Box} from '@mui/material';
 import Tema from '../../../models/Temas';
 import './ListaTemas.css';
-import useLocalStorage from 'react-use-localstorage';
 import {useNavigate } from 'react-router-dom'
 import { busca } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { UserState } from '../../../store/token/Reducer';
+import { toast } from 'react-toastify';
 
 function ListaTemas() {
   const [temas, setTemas] = useState<Tema[]>([])
@@ -20,7 +20,16 @@ function ListaTemas() {
 
   useEffect(()=>{
     if(token == ''){
-      alert("Você precisa estar logado")
+      toast.error('Você precisa estar logado',{
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme:"colored",
+        progress: undefined,
+    } );
       navigate("/login")
     }
   }, [token])
@@ -58,14 +67,14 @@ function ListaTemas() {
 
               <Link to={`/formularioTema/${temas.id}`} className="text-decorator-none">
                 <Box mx={1}>
-                  <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                  <Button variant="contained" className="btnAtualizar" size='small' color="primary" >
                     atualizar
                   </Button>
                 </Box>
               </Link>
               <Link to={`/deletarTema/${temas.id}`} className="text-decorator-none">
                 <Box mx={1}>
-                  <Button variant="contained" size='small' color="secondary">
+                  <Button variant="contained" className='btnDeletar' size='small' color="secondary">
                     deletar
                   </Button>
                 </Box>

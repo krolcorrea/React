@@ -16,45 +16,39 @@ function Footer() {
     var footerComponent;
 
     if (token !== "") {
-        footerComponent = <Grid container direction="row" justifyContent="center" alignItems="center">
-            <Grid item xs={12}>
-                <Box className="fundo">
-                    <Box className="boxRedes">
-                        <Box paddingTop={1} display="flex" alignItems="center" className='redesSociais' justifyContent="center">
-                            <Typography variant="h5" align="center" gutterBottom>Siga-nos nas redes sociais </Typography>
-                        </Box>
-                        <Box display="flex" alignItems="center" justifyContent="center">
-                            <a href="https://github.com/krolcorrea" target="_blank">
-                                <GitHubIcon className="redesSociais" />
-                            </a>
-                            <a href="https://www.instagram.com/krol.correa/" target="_blank">
-                                <InstagramIcon className="redesSociais" />
-                            </a>
-                            <a href="https://www.linkedin.com/in/caucorreasilva/" target="_blank">
-                                <LinkedInIcon className="redesSociais" />
-                            </a>
-                        </Box>
-                    </Box>
-                    <Box className="boxAutoral">
-                        <Box paddingTop={1}>
-                            <Typography variant="subtitle2" align="center" gutterBottom className="textoAutoral">© 2023 Copyright:</Typography>
-                        </Box>
+        footerComponent = (
+            <Grid container direction="row" justifyContent="center" alignItems="center">
+                <Grid item xs={12}>
+                    <Box className="fundo">
                         <Box>
-                            <a target="_blank" href="https://brasil.generation.org">
-                                <Typography variant="subtitle2" gutterBottom style={{ color: "white" }} align="center">brasil.generation.org</Typography>
-                            </a>
+                            <Box paddingTop={1} display="flex" alignItems="center" className='redesSociais' justifyContent="center">
+                                <Typography variant="h5" align="center" font-weight= "bold" gutterBottom>Minhas redes sociais </Typography>
+                            </Box>
+                            <Box display="flex" alignItems="center" justifyContent="center">
+                                <a href="https://github.com/krolcorrea" target="_blank">
+                                    <GitHubIcon className="redesSociais" />
+                                </a>
+                                <a href="https://www.instagram.com/krol.correa/" target="_blank">
+                                    <InstagramIcon className="redesSociais" />
+                                </a>
+                                <a href="https://www.linkedin.com/in/caucorreasilva/" target="_blank">
+                                    <LinkedInIcon className="redesSociais" />
+                                </a>
+                            </Box>
+                        </Box>
+                        <Box className="boxAutoral">
+                            <Box paddingTop={1}>
+                                <Typography variant="subtitle2" align="center" gutterBottom className="textoAutoral">© 2023 Copyright:</Typography>
+                            </Box>
+                            
                         </Box>
                     </Box>
-                </Box>
+                </Grid>
             </Grid>
-        </Grid>
+        );
 
-        return (
 
-            <>
-                {footerComponent}
-            </>
-        )
     }
+    return <> {footerComponent}</>
 }
 export default Footer;

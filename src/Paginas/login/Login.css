@@ -6,6 +6,18 @@
     font-weight: bold !important;
 }
 
+.loginBox {
+    border: 1px solid transparent;
+    transition: border-color 0.3s, transform 0.3s;
+    max-width: 400px; /* Defina a largura máxima desejada */
+    margin: 0 auto; /* Centraliza a caixa horizontalmente */
+  }
+  .loginBox:hover {
+    border-color: #1976d2;
+    transform: scale(1.1);
+  }
+  
+
 .imgLogin {
 
     background-image: url("../../assets/img/gatoecachorro.png") ;

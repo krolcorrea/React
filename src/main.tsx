@@ -6,6 +6,6 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root') as HTMLElement
+   document.getElementById('root') as HTMLElement
 );
 

@@ -1,20 +1,43 @@
 .imgCadastro {
 
-    background-image: url(../../assets/img/istockphoto-1135942911-1024x1024.jpg) ;
+    background-image: url(../../assets/img/istockphoto-1135942911-1024x1024.jpg);
     background-repeat: no-repeat;
     width: 100vh;
-    min-height: 100vh ;
+    min-height: 100vh;
     background-size: cover;
     background-position: center;
 
-    }
-
-    .textoLogin {
-        font-weight: bold !important;
-    }
-.btnCadastrar{
-    margin-right: 20px !important; 
 }
-.btnCancelar{
+
+.cadastro-box {
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 600px) {
+    .form-container {
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 960px) {
+    .form-container {
+      max-width: 80%;
+    }
+  }
+  
+  @media (max-width: 1280px) {
+    .form-container {
+      max-width: 70%;
+    }
+  }
+
+.btnCadastrar {
+    margin-right: auto !important;
+}
+
+.btnCancelar {
     margin-right: 20px !important;
 }
+
